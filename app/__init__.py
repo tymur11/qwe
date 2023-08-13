@@ -91,7 +91,6 @@ def admin():
     if request.method == 'POST':
         file = request.files['image']
         file.save(f'app/static/images/{file.filename}')
-    if g.validate_on_submit():
         price = g.price.data
         name = g.name.data
 
