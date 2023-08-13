@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{% block title %}
+<title>Sign in</title>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<form method="post">
+        {{forms.hidden_tag()}}
+        <p>{{forms.user.label}}{{forms.user(size=30)}}</p>
+        <p>{{forms.password.label}}{{forms.password(size=30)}}</p>
+        <p>{{forms.galochka.label}}{{forms.galochka}}</p>
+        <p>{{forms.button}}</p>
+
+    </form>
+
+{% endblock %}

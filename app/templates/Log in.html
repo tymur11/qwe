@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{% block title %}
+<title>Log in</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+{% if error%}
+    <h2>{{error}}</h2>
+    {% endif%}
+    <form method="post">
+        {{regist.hidden_tag()}}
+        <p>{{regist.user.label}} {{ regist.user(size= 30)}}</p>
+        <p>{{regist.email.label}} {{regist.email(size= 30)}}</p>
+        <p>{{regist.password.label}} {{regist.password(size= 30)}}</p>
+        {{regist.button()}}
+
+
+    </form>
+<h1>{{name}}</h1>
+<h2>{{email}}</h2>
+<h3>{{password}}</h3>
+
+{% endblock %}

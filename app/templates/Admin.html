@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{% block title %}
+<title>Admin</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="container" >
+    <form method="post" enctype="multipart/form-data">
+        <h3>{{regist.name.label}}</h3>{{regist.name(size=30)}}
+        <h3>{{regist.price.label}}</h3>{{regist.price(size=30)}}
+        <h3>image</h3><input type="file" name="image"><br>
+        {{regist.button}}
+    </form>
+
+
+</div>
+
+
+
+{% endblock %}

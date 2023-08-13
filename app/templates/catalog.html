@@ -1,0 +1,174 @@
+{%extends 'base.html'%}
+
+{% block title %}
+<title>Games</title>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="container">
+      <h1>Games</h1>
+
+<h1>{{user.name}}</h1>
+
+  </div>
+
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/image.jpg">
+            <div class="card-body">
+              <p class="card-text"> CsGo</p>
+              <p class="card-text">20₴</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <form>
+                    <input type="button" value="View" onclick='location.href="/CsGo"'>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/fortnite.jpg">
+            <div class="card-body">
+              <p class="card-text"> Fortnite</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/header.jpg">
+            <div class="card-body">
+              <p class="card-text"> PAYDAY 2</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/capsule_616x353.jpg">
+            <div class="card-body">
+              <p class="card-text">Rust</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/valorant-listing-800x450.jpg">
+            <div class="card-body">
+              <p class="card-text">Valorant</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/roblox.jpg">
+            <div class="card-body">
+              <p class="card-text">Roblox</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/terraria.jpg">
+            <div class="card-body">
+              <p class="card-text">Terraria</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/apex.jpg">
+            <div class="card-body">
+              <p class="card-text">APEX</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/images/dota2.jpg">
+            <div class="card-body">
+              <p class="card-text">Dota 2</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+{% for g in data %}
+         <div class="col">
+          <div class="card shadow-sm">
+            <img src="{{g.img}}">
+            <div class="card-body">
+              <p class="card-text">{{g.name}}</p>
+              <p class="card-text">{{g.price}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+  </div>
+
+
+{% endblock %}
